@@ -1,0 +1,21 @@
+<div class="grad">
+    <div>
+      <h3>Login Page</h3>
+    </div>
+    <div class="div1">
+      <form (ngSubmit)="login()" (ngSubmit)="submit()" >
+        <label for="username">Username : </label>
+        <input type="text" name="username" [(ngModel)]="username"> <br><br>
+    
+        <label for="password">Password : </label>
+        <input type="password" name="password" [(ngModel)]="password"> <br><br>
+    
+        <button type="submit">Login</button>
+        <button type="submit">submit</button>
+    
+        <p>Forgot Password</p>
+    
+        <p class="msg">{{msg}}</p>
+      </form>
+    </div>
+    </div>
