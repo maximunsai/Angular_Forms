@@ -1,0 +1,29 @@
+h3{
+    color: rgb(223, 37, 37);
+    font-size: 40px;
+    text-align: center;
+}
+.grad{
+    background-image: radial-gradient(pink,rgb(165, 163, 163), rgb(56, 56, 56));
+    height: 700px;
+    
+}
+.div1{
+    border: 1px solid black;
+    width: 260px;
+    height: 300px;
+    padding: 30px;
+    position: relative;
+    left: 600px;
+    border-radius: 6px;
+}
+input{
+    border-radius: 3px;
+}
+form{
+    position: relative;
+    top: 50px;
+}
+.msg{
+    color: red;
+}

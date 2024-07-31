@@ -1,0 +1,41 @@
+<div class="div1">
+    <h2 class="title">Using Reactive Form </h2>
+  </div>
+  <div class="div2">
+    <h3>Personal Details</h3>
+    <table style="width: 100%;">
+      <tr>
+        <th>Name</th>
+        <th>Place</th>
+        <th>Designation</th>
+        <th>Experiance</th>
+      </tr>
+      <tr *ngFor="let dat of data">
+        <td>{{dat.Name}}</td>
+        <td>{{dat.Place}}</td>
+        <td>{{dat.Designation}}</td>
+        <td>{{dat.Experience}}</td>
+        <td > <button class="but2" (click)="edit(dat)">patch</button> 
+        <button class="but1" (click)="del(dat)">DEl</button></td>
+      </tr>
+    </table>
+    <!-- <button (click)="edit(dat)">patch</button> -->
+  </div>
+  <div>
+    <h3>Enter Details</h3>
+    <form [formGroup]="submitForm" (ngSubmit)="onSubmit()">
+      <label for="name">Name: </label>
+      <input type="text" name="fname" formControlName="Name">
+  
+      <label for="Place">Place: </label>
+      <input type="text" name="Place" formControlName="Place">
+  
+      <label for="Designation">Designation: </label>
+      <input type="text" name="Designation" formControlName="Designation">
+  
+      <label for="Experiance">Experiance: </label>
+      <input type="number" name="Experiance" formControlName="Experience">
+  
+      <button type="submit">Submit</button>
+    </form>
+  </div>

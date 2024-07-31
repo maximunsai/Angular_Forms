@@ -1,0 +1,40 @@
+<div class="div1">
+    <h2 class="title">Using Template Driven Form</h2>
+  </div>
+  <div class="div2">
+    <h3>Personal Details</h3>
+    <table style="width: 100%;">
+      <tr>
+        <th>Name</th>
+        <th>Place</th>
+        <th>Designation</th>
+        <th>Experiance</th>
+      </tr>
+      <tr *ngFor="let dat of data">
+        <td>{{dat.fname}}</td>
+        <td>{{dat.Place}}</td>
+        <td>{{dat.Designation}}</td>
+        <td>{{dat.Experiance}}</td>
+        <td >  <button (click)="edit(dat)">patch</button>
+        </td>
+      </tr>
+    </table>
+  </div>
+  <div>
+    <h3>Enter Details</h3>
+    <form >
+      <label for="name">Name: </label>
+      <input type="text" name="fname" [(ngModel)]="fname">
+  
+      <label for="Place">Place: </label>
+      <input type="text" name="Place" [(ngModel)]="Place">
+  
+      <label for="Designation">Designation: </label>
+      <input type="text" name="Designation" [(ngModel)]="Designation">
+  
+      <label for="Experiance">Experiance: </label>
+      <input type="number" name="Experiance" [(ngModel)]="Experiance">
+  
+      <button (click)="add()">Submit</button>
+    </form>
+  </div>
